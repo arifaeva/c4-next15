@@ -1,9 +1,9 @@
-import Link from "next/link";
+import { ClientComp2 } from "@/components/client-comp-2";
 
-export default function Page() {
+export default async function Page() {
   return (
     <div>
-      <Link href="/dashboard">Dashboard</Link>
+      <ClientComp2 />
     </div>
   );
 }
