@@ -7,9 +7,14 @@ export async function doSomethingExpensive(
   _prevState: unknown,
   formData: FormData
 ) {
-  // await new Promise((resolve) => setTimeout(resolve, 2000))
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const content = formData.get("content") as string;
+
+  // input validation
+  if (!content) {
+    return { status: "error", message: "Content is required" };
+  }
 
   await prisma.note.create({
     data: {
