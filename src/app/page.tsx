@@ -6,7 +6,7 @@ export default async function Page() {
   const notes = await prisma.note.findMany();
 
   return (
-    <div>
+    <div className="w-[320px]">
       <h3>Notes</h3>
       <div>
         {notes.map((note) => (
@@ -17,7 +17,7 @@ export default async function Page() {
       </div>
       <div>
         <form action={createNote}>
-          <input name="content" placeholder="Note..." />
+          <input name="content" placeholder="Note..." className="my-2" />
           <button>Save</button>
         </form>
       </div>
