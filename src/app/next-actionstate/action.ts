@@ -9,6 +9,9 @@ export async function doSomethingExpensive(
 ) {
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
+  // User Validation
+  // isUserValid();
+
   const content = formData.get("content") as string;
 
   // input validation
@@ -24,5 +27,5 @@ export async function doSomethingExpensive(
 
   revalidatePath("/next-optimistic");
 
-  return { result: "Good!" };
+  return { status: "success", message: "Good!" };
 }
