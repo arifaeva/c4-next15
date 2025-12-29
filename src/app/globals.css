@@ -6,7 +6,7 @@
   }
 
   button {
-    @apply p-2 bg-indigo-500 text-white text-sm rounded-lg w-full;
+    @apply p-2 bg-indigo-500 text-white text-sm rounded-lg w-full disabled:opacity-50;
   }
 
   h3 {
