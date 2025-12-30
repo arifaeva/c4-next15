@@ -23,7 +23,7 @@ export default async function SingleNotePage({ params }: PageProps) {
   const note = await prisma.note.findUnique({ where: { id } });
 
   return (
-    <div>
+    <div className="flex gap-2">
       <div>{note?.content}</div>
       <form action={deleteNote}>
         <input name="noteid" defaultValue={id} hidden />
